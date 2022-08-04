@@ -43,12 +43,14 @@ Airport.create!([{
       if airport.id == i
         i += 1
       else
-        Flight.create(departure_airport_id: airport.id,
-                      arrival_airport_id: i,
-                      flight_number: Faker::Number.number(digits: 5),
-                      departure_date: date,
-                      departure_time: Faker::Time.between(from: DateTime.now, to: DateTime.tomorrow, format: :short).last(5),
-                      flight_duration: "#{rand(1..5)} hour and #{rand(0..59)} minute(s)")
+        2.times do
+          Flight.create(departure_airport_id: airport.id,
+                        arrival_airport_id: i,
+                        flight_number: Faker::Number.number(digits: 5),
+                        departure_date: date,
+                        departure_time: Faker::Time.between(from: DateTime.now, to: DateTime.tomorrow, format: :short).last(5),
+                        flight_duration: "#{rand(1..5)} hour and #{rand(0..59)} minute(s)")
+        end
         i += 1
       end
     end
