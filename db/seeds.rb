@@ -26,16 +26,6 @@ Airport.create!([{
   location: "Denver, CO"
 }])
 
-
-# 20.times do
-#   Flight.create(departure_airport_id: Faker::Number.within(range: 1..8),
-#                 arrival_airport_id: Faker::Number.within(range: 1..8),
-#                 flight_number: Faker::Number.number(digits: 5),
-#                 departure_date: Faker::Date.in_date_period(year: 2022, month: 8),
-#                 departure_time: Faker::Time.between(from: DateTime.now, to: DateTime.tomorrow, format: :short).last(5),
-#                 flight_duration: "#{rand(1..5)} hour and #{rand(0..59)} minute(s)")
-# end
-
 (Date.new(2022, 8, 01)..Date.new(2022, 8, 31)).each do |date|
   Airport.find_each do |airport|
     i = 1
@@ -57,6 +47,9 @@ Airport.create!([{
     i = 1
   end
 end
+
+
+#Saving this when I need to add consistent test flights
 
 # Flight.create! ([{
 #   departure_airport_id: 1,
