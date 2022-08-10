@@ -5,6 +5,18 @@
   <%= select_tag(:arrival_airport_id, options_for_select(@airport_options), {:prompt => "Arriving Airport"}) %>
   <%= select_tag(:departure_date, options_for_select(@date_options), {:prompt => "Departure Date"}) %>
   <%= select_tag(:number_of_passengers, options_for_select(@passenger_options), {:prompt => "Passengers"}) %>
-
   <%= form.submit "Search flights", class: "btn btn-primary" %>
+<% end %>
+
+<% if @flights.any? %>
+  <% @flights.each do |flight| %>
+  <br>
+    From: <%= Airport.find_by(id: flight.departure_airport_id).location %> | 
+    To: <%= Airport.find_by(id: flight.arrival_airport_id).location %> | 
+    Date: <%= flight.departure_date.strftime("%A, %B %d") %> | 
+    Time: <%= flight.departure_time %> | 
+    Flight Number : <%= flight.flight_number %> <br>
+  <% end %>
+<% else %>
+    <p>There are no matching flights!</p>
 <% end %>
