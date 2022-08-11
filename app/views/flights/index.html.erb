@@ -9,13 +9,19 @@
 <% end %>
 
 <% if @flights.any? %>
-  <% @flights.each do |flight| %>
-  <br>
-    From: <%= Airport.find_by(id: flight.departure_airport_id).location %> | 
-    To: <%= Airport.find_by(id: flight.arrival_airport_id).location %> | 
-    Date: <%= flight.departure_date.strftime("%A, %B %d") %> | 
-    Time: <%= flight.departure_time %> | 
-    Flight Number : <%= flight.flight_number %> <br>
+  <%= form_with model: @booking, data: { turbo: false }, url: new_booking_path, method: :get do |form| %>
+    <% @flights.each do |flight| %>
+      <br>
+      From: <%= flight.departure_airport.location %> | 
+      To: <%= flight.arrival_airport.location %> | 
+      Date: <%= flight.departure_date.strftime("%A, %B %d") %> | 
+      Time: <%= flight.departure_time %> | 
+      Flight Number : <%= flight.flight_number %> 
+      <%= form.hidden_field :number_of_passengers, value: params[:number_of_passengers] %>
+      <%= form.radio_button :flight_id, flight.id %>
+      <br>
+    <% end %>
+    <%= form.submit "Select", class: "btn btn-success" %>
   <% end %>
 <% else %>
     <p>There are no matching flights!</p>
