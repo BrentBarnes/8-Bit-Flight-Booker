@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_flight, only: [:new, :create]
+  before_action :set_flight, only: [:new]
   before_action :set_number_of_passengers, only: [:new]
 
   def new
@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    binding.pry
     if @booking.save
       flash[:notice] = "Your flight has been successfully booked"
       redirect_to @booking #booking_path(@booking.id)
@@ -25,7 +26,7 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:flight_id, :number_of_passengers, 
-      passengers_attributes: [:name, :email, :flight_id, :booking_id])
+      passengers_attributes: [:name, :email])
   end
 
   def set_flight

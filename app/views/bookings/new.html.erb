@@ -13,7 +13,7 @@ Flight Number : <%= @flight.flight_number %>
     <%= passenger_form.email_field :email, placeholder: "Passenger Email" %>
     <br>
   <% end %>
-  <% form.hidden_field :flight_id, value: @flight.id %>
-  <% form.hidden_field :number_of_passengers, value: @number_of_passengers %>
+  <%= form.hidden_field :flight_id, value: @flight.id %>
+  <%= form.hidden_field :number_of_passengers, value: @number_of_passengers %>
   <%= form.submit "Submit", class: "btn btn-success" %>
 <% end %>
