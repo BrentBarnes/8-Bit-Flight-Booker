@@ -9,11 +9,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    binding.pry
     if @booking.save
       flash[:notice] = "Your flight has been successfully booked"
       redirect_to @booking #booking_path(@booking.id)
     else
+      binding.pry
       flash.now[:notice] = "There was something wrong with your form"
       render :new, status: :unprocessable_entity
     end
