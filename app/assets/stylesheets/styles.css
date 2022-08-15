@@ -1,0 +1,42 @@
+
+@font-face {
+  font-family: 'AncientModernTales';
+  src: url('app/assets/fonts/AncientModernTales.ttf');
+  font-family: 'Pixelboy';
+  src: url('app/assets/fonts/Pixelboy.ttf');
+  font-family: 'BubbleBit';
+  src: url('BubbleBit.TTF')
+}
+
+.bubble-bit-font {
+  font-family: 'BubbleBit';
+}
+
+body {
+  position: relative;
+  background: url('8-bit-sky.jpg');
+}
+
+.card {
+  box-shadow: rgb(68, 113, 161) 0px 20px 30px -10px;
+}
+
+.navbar {
+  box-shadow: rgb(213, 243, 255) 0px 20px 20px -10px;
+}
+
+.plane1 {
+  position: absolute;
+  z-index: -1;
+  top: -1rem;
+  height: 5rem;
+  animation: 15s linear 0s slide 1;
+}
+
+@keyframes slide {
+  from {right: 0; }
+  to {
+    right: 100%;
+    transform: translateY(600%);
+  }
+}

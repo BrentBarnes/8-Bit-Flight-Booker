@@ -4,4 +4,6 @@ class Flight < ApplicationRecord
   
   has_many :bookings
   has_many :passengers
+
+  validates :flight_id, presence: true
 end
