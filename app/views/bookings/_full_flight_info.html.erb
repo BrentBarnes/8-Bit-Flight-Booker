@@ -1,0 +1,10 @@
+
+<div class="mb-4 text-center">
+  Flight Number : <%= @flight.flight_number %> | 
+  Departs: <%= @flight.departure_airport.location %> | 
+  Arrives: <%= @flight.arrival_airport.location %> | 
+  Date: <%= @flight.departure_date.strftime("%A, %B %d") %>
+  <br>
+  Departure Time: <%= @flight.departure_time %> | 
+  Duration: <%= @flight.flight_duration %>
+</div>

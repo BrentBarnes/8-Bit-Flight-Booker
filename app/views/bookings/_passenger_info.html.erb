@@ -1,0 +1,6 @@
+
+<% @booking.passengers.each do |passenger| %>
+  <%= "Name: #{passenger.name}" %> | 
+  Seat: <%= "#{(65 + rand(20)).chr }#{rand(1..6)}" %>
+  <br>
+<% end %>

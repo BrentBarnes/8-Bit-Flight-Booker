@@ -1,37 +1,13 @@
 
-<div class="d-flex flex-column align-items-center my-4">
-  <div class="text-center">
-    <h1 class="bubble-bit-font">Find a flight!</h1>
-  </div>
-  <%= form_with model: @flight, data: { turbo: false }, method: :get do |form| %>
-    <%= select_tag(:departure_airport_id, options_for_select(@airport_options), {:prompt => "Departing Airport"}) %>
-    <%= select_tag(:arrival_airport_id, options_for_select(@airport_options), {:prompt => "Arriving Airport"}) %>
-    <%= select_tag(:departure_date, options_for_select(@date_options), {:prompt => "Departure Date"}) %>
-    <%= select_tag(:number_of_passengers, options_for_select(@passenger_options), {:prompt => "Passengers"}) %>
-    <%= form.submit "Search flights", class: "search-button btn btn-primary" %>
-  <% end %>
-</div>
-
-<% if @flights.any? %>
+<% if params_present_and_no_flights_found? %>
+  <p class="alert alert-danger">
+    No flights found. Please make sure you have selected an option for each field.
+  </p>
+  <%= render "search_form" %>
+<% elsif @flights.empty? %>
+  <%= render "search_form" %>
   <%= image_tag("plane1.png", class: "plane1") %>
-  <div class="card d-flex flex-column mx-auto" style="width: 60rem">
-    <div class="card-body mx-auto">
-      <%= form_with model: @booking, data: { turbo: false }, url: new_booking_path, method: :get do |form| %>
-        <% @flights.each do |flight| %>
-          <div class="mb-4">
-            <%= form.radio_button :flight_id, flight.id, required: true %>
-            From: <%= flight.departure_airport.location %> |
-            To: <%= flight.arrival_airport.location %> |
-            Date: <%= flight.departure_date.strftime("%A, %B %d") %> |
-            Time: <%= flight.departure_time %> |
-            Flight Number : <%= flight.flight_number %>
-            <%= form.hidden_field :number_of_passengers, value: params[:number_of_passengers] %>
-          </div>
-        <% end %>
-        <div class="d-grid">
-          <%= form.submit "Select Flight", class: "btn btn-success" %>
-          </div>
-      <% end %>
-    </div>
-  </div>
+<% else %>
+  <%= render "search_form" %>
+  <%= render "results_selection_form" %>
 <% end %>

@@ -16,7 +16,6 @@ class BookingsController < ApplicationController
       flash[:notice] = "You must fill out all fields"
       @flight = Flight.find(params[:booking][:flight_id])
       render :new, status: :unprocessable_entity
-      # redirect_to new_booking_path(flight_id: params[:booking][:flight_id], number_of_passengers: params[:booking][:number_of_passengers])
     end
   end
 

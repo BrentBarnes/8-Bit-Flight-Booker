@@ -1,0 +1,13 @@
+
+<div class="d-flex flex-column align-items-center my-4">
+  <div class="text-center">
+    <h1 class="bubble-bit-font">Find a flight!</h1>
+  </div>
+  <%= form_with model: @flight, data: { turbo: false }, method: :get do |form| %>
+    <%= select_tag(:departure_airport_id, options_for_select(@airport_options), {:prompt => "Departing Airport"}) %>
+    <%= select_tag(:arrival_airport_id, options_for_select(@airport_options), {:prompt => "Arriving Airport"}) %>
+    <%= select_tag(:departure_date, options_for_select(@date_options), {:prompt => "Departure Date"}) %>
+    <%= select_tag(:number_of_passengers, options_for_select(@passenger_options), {:prompt => "Passengers"}) %>
+    <%= form.submit "Search flights", class: "search-button btn btn-primary" %>
+  <% end %>
+</div>

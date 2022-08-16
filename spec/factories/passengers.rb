@@ -2,7 +2,6 @@ FactoryBot.define do
   factory :passenger do
     name { "Dan" }
     email { "Dan@gmail.com" }
-    flight_id { 1 }
     booking_id { 1 }
   end
 

@@ -1,0 +1,14 @@
+<%= form_with model: @booking, data: { turbo: false }, url: bookings_path do |form| %>
+  <%= form.fields_for :passengers do |passenger_form| %>
+    <div class="input-group">
+      <%= passenger_form.text_field :name, class: "form-control", placeholder: "Passenger Name" %>
+      <%= passenger_form.email_field :email, class: "form-control", placeholder: "Passenger Email" %>
+    </div>
+    <br>
+  <% end %>
+  <%= form.hidden_field :flight_id, value: @flight.id %>
+  <%= form.hidden_field :number_of_passengers, value: @number_of_passengers %>
+  <div class="d-grid">
+    <%= form.submit "Submit", class: "btn btn-success" %>
+  </div>
+<% end %>

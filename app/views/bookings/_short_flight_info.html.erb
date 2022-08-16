@@ -1,0 +1,8 @@
+
+<div class="mb-4">
+  From: <%= @flight.departure_airport.location %> |
+  To: <%= @flight.arrival_airport.location %> |
+  Date: <%= @flight.departure_date.strftime("%A, %B %d") %> |
+  Time: <%= @flight.departure_time %> |
+  Flight Number : <%= @flight.flight_number %>
+</div>
