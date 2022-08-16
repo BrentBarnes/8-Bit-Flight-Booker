@@ -1,4 +1,6 @@
 
+Airport.destroy_all
+
 Airport.create!([{
   location: "San Francisco, CA"
 },
@@ -32,7 +34,7 @@ Airport.create!([{
         i += 1
       else
         2.times do
-          Flight.create(departure_airport_id: airport.id,
+          Flight.create!(departure_airport_id: airport.id,
                         arrival_airport_id: i,
                         flight_number: Faker::Number.number(digits: 5),
                         departure_date: date,
@@ -45,40 +47,3 @@ Airport.create!([{
     i = 1
   end
 end
-
-
-#Saving this when I need to add consistent test flights
-
-# Flight.create! ([{
-#   departure_airport_id: 1,
-#   arrival_airport_id: 2,
-#   flight_number: Faker::Number.number(digits: 5),
-#   departure_date: Faker::Date.in_date_period(year: 2022, month: 8),
-#   departure_time: Faker::Time.between(from: DateTime.now, to: DateTime.tomorrow, format: :short).last(5),
-#   flight_duration: "#{rand(1..5)} hour and #{rand(0..59)} minute(s)"
-# },
-# {
-#   departure_airport_id: 1,
-#   arrival_airport_id: 3,
-#   flight_number: Faker::Number.number(digits: 5),
-#   departure_date: Faker::Date.in_date_period(year: 2022, month: 8),
-#   departure_time: Faker::Time.between(from: DateTime.now, to: DateTime.tomorrow, format: :short).last(5),
-#   flight_duration: "#{rand(1..5)} hour and #{rand(0..59)} minute(s)"
-# },
-# {
-#   departure_airport_id: 2,
-#   arrival_airport_id: 1,
-#   flight_number: Faker::Number.number(digits: 5),
-#   departure_date: Faker::Date.in_date_period(year: 2022, month: 8),
-#   departure_time: Faker::Time.between(from: DateTime.now, to: DateTime.tomorrow, format: :short).last(5),
-#   flight_duration: "#{rand(1..5)} hour and #{rand(0..59)} minute(s)"
-# },
-# {
-#   departure_airport_id: 3,
-#   arrival_airport_id: 1,
-#   flight_number: Faker::Number.number(digits: 5),
-#   departure_date: Faker::Date.in_date_period(year: 2022, month: 8),
-#   departure_time: Faker::Time.between(from: DateTime.now, to: DateTime.tomorrow, format: :short).last(5),
-#   flight_duration: "#{rand(1..5)} hour and #{rand(0..59)} minute(s)"
-# }
-# ])
