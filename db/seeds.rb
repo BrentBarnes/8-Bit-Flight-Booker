@@ -1,6 +1,4 @@
 
-Airport.destroy_all
-
 Airport.create!([{
   location: "San Francisco, CA"
 },
