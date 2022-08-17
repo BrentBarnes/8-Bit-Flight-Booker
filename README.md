@@ -26,19 +26,19 @@ There is one error handling bug on the Heroku demo. As I developed the app with 
 <p float = 'left' >
   <figure>
   <figcaption>Loading/Search Page</figcaption>
-  <img src="" alt="Flight Booker home page" width="600" height="300">
+  <img src="img/FlightBooker1.png" alt="Flight Booker home page" width="600" height="300">
   </figure>
   <figure>
   <figcaption>Search Results</figcaption>
-  <img src="" alt="Flight booker search results" width="600" height="300">
+  <img src="img/FlightBooker2.png" alt="Flight booker search results" width="600" height="300">
   </figure>
   <figure>
   <figcaption>Passenger Information</figcaption>
-  <img src="" alt="Flight booker passenger details" width="600" height="300">
+  <img src="img/FlightBooker3.png" alt="Flight booker passenger details" width="600" height="300">
   </figure>
   <figure>
   <figcaption>Final Booking</figcaption>
-  <img src="" alt="Flight booker final booking" width="600" height="300">
+  <img src="img/FlightBooker4.png" alt="Flight booker final booking" width="600" height="300">
   </figure>
 </p>
 
