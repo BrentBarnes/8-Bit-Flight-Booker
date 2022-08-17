@@ -29,7 +29,7 @@
 <p>Clone the repository to your machine:</p>
 <p>&nbsp;&nbsp;&nbsp; git clone <a href="mailto:git@github.com:BrentBarnes/Odin-Flight-Booker.git">git@github.com:BrentBarnes/Odin-Flight-Booker.git</a></p>
 <p>Then, install the needed gems:</p>
-<p>&nbsp;&nbsp;&nbsp; bundle install</p>
+    bundle install
 <p>Next, migrate the database:</p>
 <p>&nbsp;&nbsp;&nbsp; rails db:migrate</p>
 <p>Load sample airports and flights:</p>
