@@ -69,6 +69,21 @@ Open browser to view application:
 localhost:3000
 ```
 
+### Run The Tests
+**Tests Include**
+Search Flights
+1. Valid inputs: Expect page to have content "From: San Francisco, CA | To: New York City, NY | Date: Monday, August 01"
+2. Invalid inputs: Expect page to have content "No flights found. Please make sure you have selected an option for each field."
+
+Create Passengers
+1. Valid inputs: Expect page to have content "Your flight has successfully been booked. Welcome aboard!"
+2. Invalid inputs: Expect page to have content "You must fill out all fields"
+
+After local installation, run:
+```ruby
+$ bundle exec rspec spec/features/
+```
+
 ### Data Model Associations
 ```ruby
 class Airport < ApplicationRecord
