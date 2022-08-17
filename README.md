@@ -71,6 +71,7 @@ localhost:3000
 
 ### Run The Tests
 **Tests Include**
+
 Search Flights
 1. Valid inputs: Expect page to have content "From: San Francisco, CA | To: New York City, NY | Date: Monday, August 01"
 2. Invalid inputs: Expect page to have content "No flights found. Please make sure you have selected an option for each field."
