@@ -40,3 +40,27 @@ bundle install
 <p>&nbsp;&nbsp;&nbsp; rails server</p>
 <p>Open browser to view application:</p>
 <p>&nbsp;&nbsp;&nbsp; localhost:3000</p>
+
+# 8-Bit Flight Booker
+
+This is a project from the <strong>Advanced Forms and Active Record</strong> section in The Odin Project's Ruby on Rains curriculum.
+The original project can be found here: [Link](https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker)
+
+### Functionality
+
+- Book one-way flights on a specific date of August 2022 for up to four passengers.
+- Associations between 4 models Airport, Flight, Passenger, Booking.
+- Prepopulate drop down menus with data from multiple models.
+- Usage of nested attributes (submitting to multiple models with a single click).
+- Seeding of 8 hardcoded airports and 3,400 flights using the Faker gem.
+- RSpec feature tests using Capybara and FactoryBot.
+- Styled using Bootstrap and custom CSS.
+- Error handling (see Heroku exception).
+
+### Live Demo
+**Heroku Exception**
+There is one error handling bug on the Heroku demo. As I developed the app with SQLite and Heroku uses PostgreSQL, if a user submits the form on the home page, the site will break. However, if you clone the app locally, an alert will appear notifying the user that there are "No flights found. Please make sure you have selected an option for each field." I will be building my next apps with PostgreSQL :)
+
+[Link](https://eight-bit-flight-booker.herokuapp.com/)
+
+### Screenshots
