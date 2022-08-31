@@ -44,7 +44,8 @@ There is one error handling bug on the Heroku demo. As I developed the app with 
   <figcaption>Mailer</figcaption>
   When booking two passengers, it will send confirmation emails to each passenger.
   <img src="img/PassengerMailer1.png" alt="Booking two passengers" width="600" height="300">
-  <img src="img/PassengerMailer3.png" alt="First passenger email" width="300" height="300"> <img src="img/PassengerMailer2.png" alt="Second passenger email" width="300" height="300">
+  <img src="img/PassengerMailer3.png" alt="First passenger email" width="600" height="300">
+  <img src="img/PassengerMailer2.png" alt="Second passenger email" width="600" height="300">
   </figure>
 </p>
 
