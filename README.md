@@ -6,14 +6,16 @@ The original project can be found here: [Flight Booker Project](https://www.theo
 
 ### Functionality
 
-- Book one-way flights on a specific date of August 2022 for up to four passengers.
-- Associations between 4 models Airport, Flight, Passenger, Booking.
-- Prepopulate drop down menus with data from multiple models.
-- Usage of nested attributes (submitting to multiple models with a single click).
-- Seeding of 8 hardcoded airports and 3,400 flights using the Faker gem.
-- RSpec feature tests using Capybara and FactoryBot.
-- Styled using Bootstrap and custom CSS.
-- Error handling (see Heroku exception).
+- Book one-way flights on a specific date of August 2022 for up to four passengers
+- Associations between 4 models Airport, Flight, Passenger, Booking
+- Prepopulate drop down menus with data from multiple models
+- Usage of nested attributes (submitting to multiple models with a single click)
+- Seeding of 8 hardcoded airports and 3,400 flights using the Faker gem
+- RSpec feature tests using Capybara and FactoryBot
+- Mailer implemented for confirmation upon booking flights
+- Use of letter opener for mailer development
+- Styled using Bootstrap and custom CSS
+- Error handling (see Heroku exception)
 
 ### Live Demo
 **Heroku Exception**
@@ -39,6 +41,11 @@ There is one error handling bug on the Heroku demo. As I developed the app with 
   <figure>
   <figcaption>Final Booking</figcaption>
   <img src="img/FlightBooker4.png" alt="Flight booker final booking" width="600" height="300">
+  <figcaption>Mailer</figcaption>
+  When booking two passengers, it will send confirmation emails to each passenger.
+  <img src="img/PassengerMailer1.png" alt="Booking two passengers" width="600" height="300">
+  <img src="img/PassengerMailer3.png" alt="First passenger email" width="200" height="200">
+  <img src="img/PassengerMailer2.png" alt="Second passenger email" width="200" height="200">
   </figure>
 </p>
 
