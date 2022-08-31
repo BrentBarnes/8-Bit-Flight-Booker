@@ -1,0 +1,11 @@
+Welcome Aboard 8-Bit Airlines, <%= @passenger.name %>!
+===============================================
+
+You have successfully booked your flight from <%= @flight.departure_airport.location %> to <%= @flight.arrival_airport.location %>.
+    Here are your flight details:
+    Flight number: <%= @flight.flight_number %> 
+    Flight date: <%= @flight.departure_date %> 
+    Flight time: <%= @flight.departure_time %>
+    Flight length: <%= @flight.flight_duration %>
+
+    Thanks for booking with us. We look forward to seeing you soon.

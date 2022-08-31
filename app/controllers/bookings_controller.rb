@@ -10,7 +10,10 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
-      flash[:notice] = "Your flight has successfully been booked. Welcome aboard!"
+      flash[:notice] = "Your flight has successfully been booked. Your booking confirmation has been sent to your email!"
+      @booking.passengers.each do |passenger|
+        PassengerMailer.with(booking: @booking, passenger: passenger).booked_flight_confirmation_email.deliver
+      end
       redirect_to booking_path(id: @booking.id, flight_id: @booking.flight_id)
     else
       flash[:notice] = "You must fill out all fields"

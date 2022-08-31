@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Welcome Aboard 8-Bit Airlines, <%= @passenger.name %>!</h1>
+  <p>
+    You have successfully booked your flight from <%= @flight.departure_airport.location %> to <%= @flight.arrival_airport.location %>.<br>
+    Here are your flight details:<br>
+    <br>
+    Flight number: <%= @flight.flight_number %><br>
+    Flight date: <%= @flight.departure_date %><br>
+    Flight time: <%= @flight.departure_time %><br>
+    Flight length: <%= @flight.flight_duration %><br>
+  </p>
+  <p>
+    Thanks for booking with us. We look forward to seeing you soon!
+  </p>
+</body>
+</html>
