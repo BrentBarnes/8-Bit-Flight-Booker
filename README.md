@@ -51,7 +51,7 @@ There is one error handling bug on the Heroku demo. As I developed the app with 
   </figure>
   <figure>
     <figcaption>Tests</figcaption>
-    <img src="img/tests.png" alt="Passing tests" width="400" height="200">
+    <img src="img/tests.png" alt="Passing tests" width="400" height="100">
   </figure>
 </p>
 
