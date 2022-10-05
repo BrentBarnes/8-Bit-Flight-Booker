@@ -10,7 +10,7 @@ RSpec.describe 'Search for matching flights', type: :feature do
     fill_in 'booking_passengers_attributes_0_email', with: 'example@email.com'
     click_on 'Submit'
     
-    expect(page).to have_content('Your flight has successfully been booked. Welcome aboard!')
+    expect(page).to have_content('Your flight has successfully been booked.')
   end
 
   scenario 'valid inputs' do

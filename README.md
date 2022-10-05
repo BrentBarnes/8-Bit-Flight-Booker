@@ -27,25 +27,31 @@ There is one error handling bug on the Heroku demo. As I developed the app with 
 
 <p float = 'left' >
   <figure>
-  <figcaption>Loading/Search Page</figcaption>
-  <img src="img/FlightBooker1.png" alt="Flight Booker home page" width="600" height="300">
+    <figcaption>Loading/Search Page</figcaption>
+    <img src="img/FlightBooker1.png" alt="Flight Booker home page" width="600" height="300">
   </figure>
   <figure>
-  <figcaption>Search Results</figcaption>
-  <img src="img/FlightBooker2.png" alt="Flight booker search results" width="600" height="300">
+    <figcaption>Search Results</figcaption>
+    <img src="img/FlightBooker2.png" alt="Flight booker search results" width="600" height="300">
   </figure>
   <figure>
-  <figcaption>Passenger Information</figcaption>
-  <img src="img/FlightBooker3.png" alt="Flight booker passenger details" width="600" height="300">
+    <figcaption>Passenger Information</figcaption>
+    <img src="img/FlightBooker3.png" alt="Flight booker passenger details" width="600" height="300">
   </figure>
   <figure>
-  <figcaption>Final Booking</figcaption>
-  <img src="img/FlightBooker4.png" alt="Flight booker final booking" width="600" height="300">
-  <figcaption>Mailer</figcaption>
-  When booking two passengers, it will send confirmation emails to each passenger.
-  <img src="img/PassengerMailer1.png" alt="Booking two passengers" width="600" height="300">
-  <img src="img/PassengerMailer3.png" alt="First passenger email" width="600" height="300">
-  <img src="img/PassengerMailer2.png" alt="Second passenger email" width="600" height="300">
+    <figcaption>Final Booking</figcaption>
+    <img src="img/FlightBooker4.png" alt="Flight booker final booking" width="600" height="300">
+  </figure>
+  <figure>
+    <figcaption>Mailer</figcaption><br>
+    When booking two passengers, it will send confirmation emails to each passenger.
+    <img src="img/PassengerMailer1.png" alt="Booking two passengers" width="600" height="300">
+    <img src="img/PassengerMailer3.png" alt="First passenger email" width="600" height="300">
+    <img src="img/PassengerMailer2.png" alt="Second passenger email" width="600" height="300">
+  </figure>
+  <figure>
+    <figcaption>Tests</figcaption>
+    <img src="img/tests.png" alt="Passing tests" width="400" height="200">
   </figure>
 </p>
 
