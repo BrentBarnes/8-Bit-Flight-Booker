@@ -17,12 +17,6 @@ The original project can be found here: [Flight Booker Project](https://www.theo
 - Styled using Bootstrap and custom CSS
 - Error handling (see Heroku exception)
 
-### Live Demo
-**Heroku Exception**
-There is one error handling bug on the Heroku demo. As I developed the app with SQLite and Heroku uses PostgreSQL, if a user submits the form on the home page, the site will break. However, if you clone the app locally, an alert will appear notifying the user that there are "No flights found. Please make sure you have selected an option for each field." I will be building my next apps with PostgreSQL :)
-
-[Link to Heroku Live Demo](https://eight-bit-flight-booker.herokuapp.com/)
-
 ### Screenshots
 
 <p float = 'left' >
